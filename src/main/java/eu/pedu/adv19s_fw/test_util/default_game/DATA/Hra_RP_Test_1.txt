@@ -1,0 +1,11 @@
+vezmi destnik
+jdi   koupelna
+vezmi casopis 
+vezmi bryle   
+poloz destnik 
+vezmi bryle   
+jdi   predsin 
+jdi   obyvak  
+poloz casopis 
+jdi   kuchyn  
+konec

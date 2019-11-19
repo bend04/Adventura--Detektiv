@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+
+<StackPane prefWidth="1500" prefHeight="800" stylesheets="/style.css" xmlns="http://javafx.com/javafx/1.8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.vse.java.adventura.game.Controller">
+    <ImageView fx:id="obrazekLokace" />
+    <ImageView fx:id="obrazekPredmetu" />
+    <ImageView fx:id="obrazekPredmetuBatoh" />
+    <BorderPane prefHeight="691.0" prefWidth="742.0">
+        <top>
+
+            <MenuBar prefHeight="11.0" prefWidth="742.0">
+                <menus>
+                    <Menu text="Soubor">
+                        <items>
+                            <MenuItem onAction="#novaHra" text="Nová Hra" />
+                            <MenuItem onAction="#konecHry" text="Konec" />
+                        </items>
+                    </Menu>
+                    <Menu text="Nápověda">
+                        <items>
+                            <MenuItem onAction="#napoveda" text="Nápověda" />
+                            <MenuItem onAction="#jakVyhrat" text="Jak vyhrát?" />
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+
+        </top>
+        <bottom>
+            <VBox alignment="CENTER" styleClass="kontejner">
+                <Label fx:id="jmenoLokace" styleClass="velky-nadpis" />
+                <Label fx:id="popisLokace" styleClass="nadpis" />
+            </VBox>
+        </bottom>
+        <right>
+            <GridPane vgap="10">
+                <rowConstraints>
+                    <RowConstraints percentHeight="33" />
+                    <RowConstraints percentHeight="33" />
+                    <RowConstraints percentHeight="33" />
+                </rowConstraints>
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="200" />
+                </columnConstraints>
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+
+                <!--     Vychody           -->
+                <VBox prefHeight="189.0" prefWidth="200.0" styleClass="kontejner" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label styleClass="nadpis" text="Východy" />
+                    <VBox fx:id="seznamVychodu" />
+                </VBox>
+
+                <!--     Predmety + Postavy          -->
+                <VBox prefHeight="197.0" prefWidth="200.0" styleClass="kontejner" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Label styleClass="nadpis" text="Předměty + Postavy" />
+                    <VBox fx:id="seznamPredmetuVMistnosti" />
+                </VBox>
+
+                <!--     Batoh           -->
+                <VBox prefHeight="198.0" prefWidth="200.0" styleClass="kontejner" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <Label styleClass="nadpis" text="Batoh" />
+                    <VBox fx:id="seznamPredmetuVBatohu" />
+
+                </VBox>
+            </GridPane>
+        </right>
+
+        <left>
+
+            <!--     Nastavení průběhu hry + příkazového řádku         -->
+            <GridPane vgap="10">
+                <rowConstraints>
+                    <RowConstraints percentHeight="60.0" />  <!-- Výška průbehu hry -->
+                    <RowConstraints percentHeight="10.0" />
+                    <RowConstraints percentHeight="10.0" />
+               <RowConstraints percentHeight="10.0" />
+               <RowConstraints percentHeight="10.0" />
+                </rowConstraints>
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="500" /> <!--   Šířka průbehu hry    -->
+                </columnConstraints>
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+
+                <!--     Průběh hry          -->
+                <VBox prefHeight="259.0" prefWidth="500.0" styleClass="kontejner" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label styleClass="nadpis" text="Průběh hry" />
+                    <TextArea fx:id="textArea" prefHeight="620.0" prefWidth="500.0">
+                    </TextArea>
+                </VBox>
+
+                <!--     Příkazový řádek          -->
+                <VBox styleClass="kontejner" GridPane.rowIndex="1">
+                    <Label styleClass="nadpis" text="Příkazový řádek" />
+                    <TextField fx:id="textField" prefWidth="200.0">
+                    </TextField>
+                <Button contentDisplay="RIGHT" onAction="#zadaniPrikazu" prefHeight="26.0" prefWidth="499.0" text="Použít příkaz" />
+                </VBox>
+
+                <HBox alignment="bottom_right" spacing="10" GridPane.rowIndex="4" />
+
+
+            </GridPane>
+        </left>
+    </BorderPane>
+</StackPane>

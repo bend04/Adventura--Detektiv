@@ -1,0 +1,3 @@
+jdi   koupelna
+jdi   predsin 
+jdi   loznice  

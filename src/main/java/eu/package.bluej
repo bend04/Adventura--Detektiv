@@ -1,0 +1,22 @@
+#BlueJ package file
+objectbench.height=76
+objectbench.width=312
+package.editor.height=315
+package.editor.width=178
+package.editor.x=723
+package.editor.y=455
+package.numDependencies=0
+package.numTargets=1
+package.showExtends=true
+package.showUses=false
+project.charset=UTF-8
+readme.editor.height=640
+readme.editor.width=640
+readme.editor.x=0
+readme.editor.y=0
+target1.height=62
+target1.name=pedu
+target1.type=PackageTarget
+target1.width=80
+target1.x=160
+target1.y=10

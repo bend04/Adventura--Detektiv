@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Detmaven:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Detmaven_jar</output-path>
+    <root id="archive" name="Detmaven.jar">
+      <element id="module-output" name="Detmaven" />
+    </root>
+  </artifact>
+</component>
